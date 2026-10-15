@@ -1,0 +1,1017 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap");
+:root {
+  --ink: #191916;
+  --muted: #6f706a;
+  --line: #e7e5de;
+  --paper: #fbfaf7;
+  --white: #fff;
+  --accent: #d6e35f;
+  --radius: 16px;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "DM Sans", Arial, sans-serif;
+}
+a {
+  color: inherit;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #7d8b14;
+  outline-offset: 3px;
+}
+.skip-link {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  z-index: 1000;
+  transform: translateY(-150%);
+  padding: 12px 16px;
+  border-radius: 8px;
+  background: var(--ink);
+  color: #fff;
+  font-weight: 700;
+}
+.skip-link:focus {
+  transform: translateY(0);
+}
+button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+  transform: none;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(251, 250, 247, 0.95);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(14px);
+}
+.header-inner {
+  max-width: 1240px;
+  min-height: 76px;
+  margin: auto;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--accent);
+  font: 700 26px "Playfair Display", Georgia, serif;
+}
+.brand-mark span,
+.footer-brand span {
+  color: #718018;
+}
+.brand-name {
+  display: grid;
+  gap: 3px;
+  font: 700 20px/1 "Playfair Display", Georgia, serif;
+}
+.brand-name small {
+  font: 600 9px "DM Sans", Arial, sans-serif;
+  letter-spacing: 1.6px;
+}
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.main-nav a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+.cart-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.cart-count {
+  display: inline-grid;
+  place-items: center;
+  min-width: 24px;
+  height: 24px;
+  padding: 0 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  font-size: 12px;
+}
+.hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 460px;
+  padding: 68px 20px 58px;
+  background: #f0efe8;
+}
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1240px;
+  margin: auto;
+}
+.eyebrow {
+  margin: 0 0 14px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.hero h1,
+.detail-copy h1,
+.cart-page-container > h1,
+.checkout-container > h1,
+.receipt-container h1 {
+  margin: 0;
+  font: 600 clamp(42px, 11vw, 78px)/1.02 "Playfair Display", Georgia, serif;
+  letter-spacing: -1.7px;
+}
+.hero h1 span {
+  color: #7c861d;
+}
+.hero-description {
+  max-width: 470px;
+  margin: 22px 0 28px;
+  color: #5e5f58;
+  font-size: 16px;
+  line-height: 1.8;
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 48px;
+  padding: 13px 20px;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+.button:hover {
+  transform: translateY(-1px);
+}
+.button-dark {
+  background: var(--ink);
+  color: white;
+}
+.button-outline {
+  background: transparent;
+  color: var(--ink);
+}
+.hero-art {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  right: -42px;
+  bottom: -60px;
+  border-radius: 50%;
+  border: 1px solid #d8d7cb;
+}
+.hero-circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid #d1d0c2;
+}
+.circle-one {
+  inset: 22px;
+}
+.circle-two {
+  inset: 45px;
+}
+.hero-stamp {
+  position: absolute;
+  inset: 68px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--accent);
+  transform: rotate(-12deg);
+}
+.hero-stamp span {
+  font-size: 8px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+.hero-stamp strong {
+  font: 700 42px "Playfair Display", Georgia, serif;
+}
+.menu-section {
+  max-width: 1240px;
+  margin: auto;
+  padding: 54px 18px 80px;
+}
+.section-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.section-heading h2 {
+  margin: 0;
+  font: 600 34px/1.2 "Playfair Display", Georgia, serif;
+}
+.section-heading > p {
+  color: var(--muted);
+  font-size: 13px;
+}
+.menu-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+.category-list {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 3px 2px 8px;
+}
+.category-button {
+  flex: 0 0 auto;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: white;
+  color: #4f504a;
+  font-size: 13px;
+  cursor: pointer;
+}
+.category-button.active {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: white;
+}
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 46px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: white;
+}
+.search-box > span:not(.sr-only) {
+  font-size: 25px;
+  color: var(--muted);
+}
+.search-box input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+}
+.results-count {
+  margin: 0 0 16px;
+  color: var(--muted);
+  font-size: 12px;
+}
+.dish-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 18px;
+}
+.dish-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: white;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.dish-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px #1e1e1412;
+}
+.dish-visual {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 190px;
+  overflow: hidden;
+  padding: 18px;
+  background: #e9e7d9;
+  text-decoration: none;
+  isolation: isolate;
+}
+.dish-visual:before,
+.dish-visual:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+}
+.dish-visual:before {
+  width: 180px;
+  height: 180px;
+  top: -48px;
+  right: -28px;
+  background: #d9dfb0;
+}
+.dish-visual:after {
+  width: 120px;
+  height: 120px;
+  top: 18px;
+  right: 28px;
+  border: 1px solid #19191629;
+}
+.dish-visual-mark {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  font-size: 9px;
+  line-height: 1.3;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.dish-visual-name {
+  max-width: 80%;
+  font: 600 27px/1.05 "Playfair Display", Georgia, serif;
+}
+.dish-badge {
+  position: absolute;
+  right: 12px;
+  bottom: 14px;
+  padding: 6px 9px;
+  border-radius: 999px;
+  background: #ffffffcc;
+  font-size: 10px;
+}
+.dish-card-body {
+  padding: 17px;
+}
+.dish-card-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+.dish-name {
+  font: 600 20px "Playfair Display", Georgia, serif;
+  text-decoration: none;
+}
+.dish-price {
+  flex: 0 0 auto;
+  font-size: 15px;
+  font-weight: 700;
+}
+.dish-price small {
+  color: var(--muted);
+  font-size: 10px;
+}
+.dish-card-body > p {
+  min-height: 46px;
+  margin: 10px 0 18px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+.dish-card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.category-label {
+  color: var(--muted);
+  font-size: 11px;
+  text-transform: capitalize;
+}
+.add-button {
+  min-height: 36px;
+  padding: 8px 14px;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  background: white;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.add-button:hover {
+  background: var(--accent);
+}
+.empty-state {
+  padding: 36px 20px;
+  border: 1px dashed #cfcec4;
+  border-radius: var(--radius);
+  text-align: center;
+}
+.empty-state h2,
+.empty-state h3 {
+  font-family: "Playfair Display", Georgia, serif;
+}
+.empty-state p {
+  margin: 0 auto 20px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+.detail-page,
+.standard-page {
+  min-height: 60vh;
+  padding: 32px 18px 64px;
+}
+.detail-wrap,
+.cart-page-container,
+.checkout-container,
+.receipt-container {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+.back-link {
+  display: inline-block;
+  margin-bottom: 28px;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 13px;
+}
+.detail-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 30px;
+}
+.detail-visual {
+  min-height: 300px;
+  border-radius: var(--radius);
+}
+.detail-visual .dish-visual-name {
+  font-size: 42px;
+}
+.detail-copy {
+  padding: 12px 0;
+}
+.detail-copy h1 {
+  margin-bottom: 18px;
+  font-size: clamp(42px, 10vw, 64px);
+}
+.detail-description,
+.page-intro {
+  color: var(--muted);
+  line-height: 1.8;
+}
+.spicy-label {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 12px;
+}
+.detail-price {
+  margin: 28px 0;
+  font-size: 30px;
+  font-weight: 700;
+}
+.detail-price span {
+  color: var(--muted);
+  font-size: 13px;
+}
+.detail-add {
+  width: 100%;
+}
+.cart-page-container > .eyebrow,
+.checkout-container > .eyebrow,
+.receipt-container > .eyebrow {
+  margin-top: 20px;
+}
+.cart-page-container > h1,
+.checkout-container > h1 {
+  margin-bottom: 28px;
+  font-size: clamp(38px, 8vw, 58px);
+}
+.cart-layout,
+.checkout-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+  margin-top: 24px;
+}
+.cart-items {
+  display: grid;
+  gap: 12px;
+}
+.cart-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  padding: 17px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: white;
+}
+.cart-item-copy h2 {
+  margin: 0 0 5px;
+  font: 600 18px "Playfair Display", Georgia, serif;
+}
+.cart-item-copy p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+.cart-item > strong {
+  font-size: 13px;
+}
+.quantity-control {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.quantity-control button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+}
+.text-button {
+  border: 0;
+  background: none;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.remove-button {
+  justify-self: start;
+  color: #9a3026;
+  font-size: 12px;
+}
+.order-summary {
+  align-self: start;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: white;
+}
+.order-summary h2 {
+  margin-top: 0;
+  font: 600 22px "Playfair Display", Georgia, serif;
+}
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 0;
+  color: #55564f;
+  font-size: 13px;
+}
+.summary-total {
+  margin-top: 10px;
+  border-top: 1px solid var(--line);
+  color: var(--ink);
+  font-size: 16px;
+}
+.demo-note {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.6;
+}
+.button-full {
+  width: 100%;
+  margin-top: 12px;
+}
+.checkout-container .page-intro {
+  margin-top: -14px;
+}
+.checkout-form {
+  display: grid;
+  gap: 16px;
+}
+.checkout-form label {
+  display: grid;
+  gap: 7px;
+  font-size: 13px;
+  font-weight: 700;
+}
+.checkout-form input,
+.checkout-form select,
+.checkout-form textarea {
+  width: 100%;
+  min-height: 46px;
+  padding: 12px;
+  border: 1px solid #d9d8d0;
+  border-radius: 8px;
+  background: white;
+  color: var(--ink);
+  font-weight: 400;
+}
+.checkout-form textarea {
+  resize: vertical;
+}
+.form-error {
+  margin: 0;
+  color: #a12626;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.receipt-container {
+  text-align: center;
+}
+.receipt-check {
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  margin: 10px auto 22px;
+  border-radius: 50%;
+  background: var(--accent);
+  font-size: 28px;
+}
+.receipt-container h1 {
+  margin-bottom: 14px;
+  font-size: clamp(38px, 8vw, 58px);
+}
+.receipt-panel {
+  max-width: 600px;
+  margin: 28px auto 14px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: white;
+  text-align: left;
+}
+.receipt-panel hr {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: 10px 0;
+}
+.site-footer {
+  background: #efeee7;
+}
+.footer-inner {
+  max-width: 1240px;
+  margin: auto;
+  padding: 30px 18px;
+}
+.footer-brand {
+  margin: 0;
+  font: 700 24px "Playfair Display", Georgia, serif;
+}
+.footer-inner > p:nth-child(2) {
+  color: var(--muted);
+  font-size: 13px;
+}
+.footer-inner small {
+  color: var(--muted);
+  font-size: 10px;
+}
+@media (min-width: 600px) {
+  .header-inner {
+    padding: 12px 28px;
+  }
+  .hero {
+    padding: 80px 28px 75px;
+  }
+  .hero-art {
+    width: 330px;
+    height: 330px;
+    right: 0;
+    bottom: -75px;
+  }
+  .hero-stamp {
+    inset: 92px;
+  }
+  .menu-section {
+    padding: 68px 28px 90px;
+  }
+  .section-heading {
+    flex-direction: row;
+    align-items: end;
+    justify-content: space-between;
+  }
+  .menu-controls {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .category-list {
+    max-width: calc(100% - 240px);
+  }
+  .search-box {
+    flex: 0 0 220px;
+  }
+  .dish-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .detail-page,
+  .standard-page {
+    padding: 48px 28px 80px;
+  }
+  .detail-layout {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+  }
+  .detail-visual {
+    min-height: 380px;
+  }
+  .detail-add {
+    width: auto;
+  }
+  .cart-layout,
+  .checkout-layout {
+    grid-template-columns: minmax(0, 1.5fr) minmax(260px, 0.8fr);
+    align-items: start;
+  }
+}
+@media (min-width: 900px) {
+  .hero {
+    min-height: 520px;
+    padding-top: 100px;
+  }
+  .hero-art {
+    width: 420px;
+    height: 420px;
+    right: 7%;
+    bottom: -95px;
+  }
+  .hero-stamp {
+    inset: 120px;
+  }
+  .dish-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+  }
+  .dish-visual {
+    min-height: 210px;
+  }
+  .detail-page,
+  .standard-page {
+    padding-top: 58px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *:before,
+  *:after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
+
+/* Accessible touch targets: keep common controls comfortably tappable on phones. */
+.category-button,
+.add-button,
+.quantity-control button,
+.text-button,
+.main-nav a {
+  min-height: 44px;
+}
+.category-button,
+.add-button,
+.quantity-control button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.quantity-control button {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+}
+.text-button {
+  padding: 10px 8px;
+}
+.search-box {
+  min-height: 48px;
+}
+.checkout-form input,
+.checkout-form select,
+.checkout-form textarea {
+  min-height: 48px;
+}
+@media (hover: none) {
+  .button:hover,
+  .dish-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  .add-button:hover {
+    background: white;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Security and delivery exercise */
+.auth-panel,
+.protected-page {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.auth-panel {
+  max-width: 520px;
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: white;
+}
+.auth-panel h1,
+.protected-page > h1 {
+  font: 600 clamp(38px, 8vw, 58px)/1.05 "Playfair Display", Georgia, serif;
+  margin: 0 0 14px;
+}
+.demo-credentials {
+  margin: 26px 0 14px;
+  padding: 16px;
+  border-radius: 12px;
+  background: #f0efe8;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+.demo-credentials h2 {
+  font: 600 20px "Playfair Display", Georgia, serif;
+}
+.demo-credentials p {
+  line-height: 1.7;
+}
+.protected-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: 16px;
+  margin: 28px 0;
+}
+.protected-card {
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: white;
+  overflow-wrap: anywhere;
+}
+.protected-card h2 {
+  font: 600 24px "Playfair Display", Georgia, serif;
+}
+.protected-card .button {
+  margin-top: 12px;
+}
+.delivery-map {
+  height: 360px;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #e8e6dc;
+}
+.map-placeholder {
+  display: grid;
+  place-items: center;
+  height: 360px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #e8e6dc;
+}
+.map-caption,
+.stream-state {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+.tracking-details {
+  max-width: 760px;
+  margin-top: 26px;
+}
+.tracking-details h2 {
+  font: 600 26px "Playfair Display", Georgia, serif;
+}
+.tracking-details dl {
+  display: grid;
+  gap: 0;
+  margin: 0 0 20px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: white;
+}
+.tracking-details dl > div {
+  display: grid;
+  grid-template-columns: minmax(100px, 0.6fr) minmax(0, 1.4fr);
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+}
+.tracking-details dl > div:last-child {
+  border-bottom: 0;
+}
+.tracking-details dt {
+  color: var(--muted);
+  font-size: 13px;
+}
+.tracking-details dd {
+  margin: 0;
+  font-weight: 600;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+.timeline {
+  padding-left: 22px;
+}
+.timeline li {
+  padding: 8px 0 12px 5px;
+}
+.timeline li span {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 4px;
+}
+.courier-pin {
+  display: grid;
+  place-items: center;
+  background: #d6e35f;
+  border: 3px solid #191916;
+  border-radius: 50%;
+  font-size: 22px;
+  color: #191916;
+}
+.main-nav {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.main-nav a {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 0;
+}
+.tracking-details form {
+  margin-top: 14px;
+}
+@media (max-width: 560px) {
+  .header-inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .main-nav {
+    justify-content: flex-start;
+    gap: 14px;
+  }
+  .delivery-map,
+  .map-placeholder {
+    height: 300px;
+  }
+  .tracking-details dl > div {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+  .auth-panel {
+    padding: 20px;
+  }
+}
+
+.success-note {
+  padding: 12px 14px;
+  border: 1px solid #9ba84b;
+  border-radius: 10px;
+  background: #f3f5dc;
+  line-height: 1.6;
+}
+.note-form {
+  max-width: 520px;
+  margin: 16px 0 28px;
+}

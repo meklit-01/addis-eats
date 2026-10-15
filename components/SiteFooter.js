@@ -1,0 +1,1 @@
+export default function SiteFooter() { return <footer className="site-footer"><div className="footer-inner"><p className="footer-brand">addis eats<span>.</span></p><p>Good food, rooted in Ethiopian flavor.</p><small>© 2026 Addis Eats. Demo ordering experience.</small></div></footer>; }

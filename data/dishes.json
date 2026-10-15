@@ -1,0 +1,317 @@
+[
+  {
+    "id": 1,
+    "image": "images/doro.png",
+    "name": "Doro Wet",
+    "price": 250,
+    "category": "main",
+    "spicy": true,
+    "description": "A traditional Ethiopian chicken stew cooked with berbere spices."
+  },
+  {
+    "id": 2,
+    "image": "images/kitfo.png",
+    "name": "Kitfo",
+    "price": 350,
+    "category": "main",
+    "spicy": true,
+    "description": "Minced beef seasoned with mitmita and Ethiopian butter."
+  },
+  {
+    "id": 3,
+    "image": "images/shro.png",
+    "name": "Shiro",
+    "price": 150,
+    "category": "side",
+    "spicy": false,
+    "description": "A smooth chickpea stew made with Ethiopian spices."
+  },
+  {
+    "id": 4,
+    "image": "images/injera.png",
+    "name": "Injera",
+    "price": 50,
+    "category": "side",
+    "spicy": false,
+    "description": "Traditional Ethiopian sourdough flatbread made from teff."
+  },
+  {
+    "id": 5,
+    "image": "images/ayib.png",
+    "name": "Ayib",
+    "price": 100,
+    "category": "side",
+    "spicy": false,
+    "description": "Fresh Ethiopian cottage cheese often served with spicy dishes."
+  },
+  {
+    "id": 6,
+    "image": "images/gomen.png",
+    "name": "Gomen",
+    "price": 100,
+    "category": "side",
+    "spicy": false,
+    "description": "Collard greens cooked with Ethiopian spices."
+  },
+  {
+    "id": 7,
+    "image": "images/tibs.png",
+    "name": "Tibs",
+    "price": 300,
+    "category": "main",
+    "spicy": true,
+    "description": "Sautéed beef cooked with onions, peppers, and Ethiopian spices."
+  },
+  {
+    "id": 8,
+    "image": "images/beyaynetu.png",
+    "name": "Beyainetu",
+    "price": 250,
+    "category": "main",
+    "spicy": false,
+    "description": "A colorful combination of Ethiopian vegetarian dishes served together."
+  },
+  {
+    "id": 9,
+    "image": "images/spritet.jfif",
+    "name": "Sprite",
+    "price": 80,
+    "category": "beverage",
+    "spicy": false,
+    "description": "A refreshing lemon-lime soft drink."
+  },
+  {
+    "id": 10,
+    "image": "images/water.jfif",
+    "name": "Bottled Water",
+    "price": 40,
+    "category": "beverage",
+    "spicy": false,
+    "description": "Cold bottled drinking water."
+  },
+  {
+    "id": 11,
+    "image": "images/tea.jfif",
+    "name": "Ethiopian Tea",
+    "price": 70,
+    "category": "hot-drink",
+    "spicy": false,
+    "description": "Hot tea served with traditional Ethiopian flavors."
+  },
+  {
+    "id": 12,
+    "image": "images/coffee.jfif",
+    "name": "Ethiopian Coffee",
+    "price": 100,
+    "category": "hot-drink",
+    "spicy": false,
+    "description": "Freshly roasted and brewed Ethiopian coffee."
+  },
+  {
+    "id": 13,
+    "image": "images/abo.jfif",
+    "name": "Ambo Water",
+    "price": 60,
+    "category": "beverage",
+    "spicy": false,
+    "description": "Refreshing sparkling mineral water from Ethiopia."
+  },
+  {
+    "id": 14,
+    "image": "images/mirinda.jfif",
+    "name": "Mirinda",
+    "price": 80,
+    "category": "beverage",
+    "spicy": false,
+    "description": "A refreshing orange-flavored soft drink."
+  },
+  {
+    "id": 15,
+    "image": "images/coca.jfif",
+    "name": "Coca-Cola",
+    "price": 80,
+    "category": "beverage",
+    "spicy": false,
+    "description": "A classic chilled cola soft drink."
+  },
+  {
+    "id": 16,
+    "image": "images/pepsi.jfif",
+    "name": "Pepsi",
+    "price": 80,
+    "category": "beverage",
+    "spicy": false,
+    "description": "A refreshing chilled cola soft drink."
+  },
+  {
+    "id": 17,
+    "image": "images/mango-juice.jfif",
+    "name": "Mango Juice",
+    "price": 120,
+    "category": "Juice",
+    "spicy": false,
+    "description": "Sweet and refreshing juice made from ripe mangoes."
+  },
+  {
+    "id": 18,
+    "image": "images/avocado-juice.jfif",
+    "name": "Avocado Juice",
+    "price": 150,
+    "category": "Juice",
+    "spicy": false,
+    "description": "Creamy and refreshing avocado juice blended with fresh ingredients."
+  },
+  {
+    "id": 19,
+    "image": "images/papaya-juice.jfif",
+    "name": "Papaya Juice",
+    "price": 120,
+    "category": "Juice",
+    "spicy": false,
+    "description": "Fresh and naturally sweet papaya juice."
+  },
+  {
+    "id": 21,
+    "image": "images/macchiato.jfif",
+    "name": "Macchiato",
+    "price": 100,
+    "category": "hot-drink",
+    "spicy": false,
+    "description": "Espresso topped with steamed milk, a popular Ethiopian café drink."
+  },
+  {
+    "id": 22,
+    "image": "images/latte.jfif",
+    "name": "Café Latte",
+    "price": 130,
+    "category": "hot-drink",
+    "spicy": false,
+    "description": "Smooth espresso combined with steamed milk."
+  },
+  {
+    "id": 23,
+    "image": "images/cappuccino.jfif",
+    "name": "Cappuccino",
+    "price": 130,
+    "category": "hot-drink",
+    "spicy": false,
+    "description": "Espresso topped with steamed milk and a layer of foam."
+  },
+  {
+    "id": 24,
+    "image": "images/ginger-tea.jfif",
+    "name": "Ginger Tea",
+    "price": 80,
+    "category": "hot-drink",
+    "spicy": false,
+    "description": "Hot tea prepared with fresh ginger and traditional spices."
+  },
+  {
+    "id": 25,
+    "image": "images/ginger-coffee.jfif",
+    "name": "Ginger Coffee",
+    "price": 110,
+    "category": "hot-drink",
+    "spicy": false,
+    "description": "Fresh Ethiopian coffee infused with the warm flavor of ginger."
+  },
+  {
+    "id": 26,
+    "image": "images/spiced-tea.jfif",
+    "name": "Spiced Tea",
+    "price": 90,
+    "category": "hot-drink",
+    "spicy": false,
+    "description": "Hot black tea prepared with aromatic Ethiopian spices."
+  },
+  {
+    "id": 27,
+    "image": "images/orange-juice.jfif",
+    "name": "Orange Juice",
+    "price": 120,
+    "category": "Juice",
+    "spicy": false,
+    "description": "Fresh and refreshing juice made from ripe oranges."
+  },
+  {
+    "id": 28,
+    "image": "images/pineapple-juice.jfif",
+    "name": "Pineapple Juice",
+    "price": 130,
+    "category": "Juice",
+    "spicy": false,
+    "description": "Sweet and tangy juice made from fresh pineapple."
+  },
+  {
+    "id": 29,
+    "image": "images/watermelon-juice.jfif",
+    "name": "Watermelon Juice",
+    "price": 120,
+    "category": "Juice",
+    "spicy": false,
+    "description": "Cool and refreshing juice made from fresh watermelon."
+  },
+  {
+    "id": 30,
+    "image": "images/apple-juice.jfif",
+    "name": "Apple Juice",
+    "price": 120,
+    "category": "Juice",
+    "spicy": false,
+    "description": "Naturally sweet juice made from fresh apples."
+  },
+  {
+    "id": 31,
+    "image": "images/banana-juice.jfif",
+    "name": "Banana Juice",
+    "price": 130,
+    "category": "Juice",
+    "spicy": false,
+    "description": "Creamy and naturally sweet banana drink."
+  },
+  {
+    "id": 32,
+    "image": "images/lemon-juice.jfif",
+    "name": "Lemon Juice",
+    "price": 100,
+    "category": "Juice",
+    "spicy": false,
+    "description": "Fresh and refreshing lemon juice with a slightly sour taste."
+  },
+  {
+    "id": 33,
+    "image": "images/grape-juice.jfif",
+    "name": "Grape Juice",
+    "price": 130,
+    "category": "Juice",
+    "spicy": false,
+    "description": "Sweet and refreshing juice made from fresh grapes."
+  },
+  {
+    "id": 34,
+    "image": "images/guava-juice.jfif",
+    "name": "Guava Juice",
+    "price": 130,
+    "category": "Juice",
+    "spicy": false,
+    "description": "Smooth and flavorful juice made from ripe guava."
+  },
+  {
+    "id": 35,
+    "image": "images/cocktail-juice.jfif",
+    "name": "Fruit Cocktail",
+    "price": 160,
+    "category": "Juice",
+    "spicy": false,
+    "description": "A refreshing blend of several fresh fruits."
+  },
+  {
+    "id": 36,
+    "image": "images/special-juice.jfif",
+    "name": "Special Mixed Juice",
+    "price": 180,
+    "category": "Juice",
+    "spicy": false,
+    "description": "A delicious combination of fresh mango, avocado, papaya, and other fruits."
+  }
+]

@@ -1,0 +1,8 @@
+"use client";
+import Link from "next/link";
+import {useCart} from "./CartProvider";
+export default function CartPageClient() {
+ const {items,ready,increaseQuantity,decreaseQuantity,removeItem,totalPrice}=useCart();
+ if(!ready) return <p>Loading your cart...</p>;
+ return <div className="cart-page-container"><p className="eyebrow">YOUR ORDER</p><h1>Your cart</h1>{!items.length?<div className="empty-state"><h2>Your cart is empty</h2><p>Explore the menu and add something delicious.</p><Link className="button button-dark" href="/">Browse menu</Link></div>:<div className="cart-layout"><div className="cart-items">{items.map(item=><article className="cart-item" key={item.id}><div className="cart-item-copy"><h2>{item.name}</h2><p>{item.price} ETB each</p></div><div className="quantity-control"><button type="button" onClick={()=>decreaseQuantity(item.id)} aria-label={`Decrease ${item.name}`}>−</button><span>{item.quantity}</span><button type="button" onClick={()=>increaseQuantity(item.id)} aria-label={`Increase ${item.name}`}>+</button></div><strong>{item.price*item.quantity} ETB</strong><button className="text-button remove-button" type="button" onClick={()=>removeItem(item.id)}>Remove</button></article>)}</div><aside className="order-summary"><h2>Order summary</h2><div className="summary-row"><span>Items</span><span>{items.reduce((s,i)=>s+i.quantity,0)}</span></div><div className="summary-row summary-total"><span>Total</span><strong>{totalPrice} ETB</strong></div><p className="demo-note">This demo does not process real payments.</p><Link className="button button-dark button-full" href="/checkout">Continue to checkout</Link></aside></div>}</div>;
+}

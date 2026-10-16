@@ -1,0 +1,5 @@
+[build]
+  # Overrides the base directory set in the Netlify UI (".next" does not exist in the repo)
+  base = "."
+  command = "npm run build"
+  publish = ".next"
